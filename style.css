@@ -1,0 +1,306 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500&family=Poppins:wght@300;400;600&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* BODY – CENTER EVERYTHING */
+
+body {
+  font-family: 'Poppins', sans-serif;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #eaf4ff, #cfe7ff, #ffffff);
+  background-size: 200% 200%;
+  animation: gradientBG 10s ease infinite;
+  color: #0b2a4a;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+
+  overflow: hidden;
+}
+
+@keyframes gradientBG {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* MAIN CARD */
+
+.container {
+  max-width: 650px;
+  padding: 50px 35px;
+  border-radius: 25px;
+
+  background: rgba(255, 255, 255, 0.65);
+  -webkit-backdrop-filter: blur(15px);
+  backdrop-filter: blur(15px);
+
+  box-shadow: 0 30px 80px rgba(11, 42, 74, 0.15);
+
+  animation: fadeIn 1.4s ease forwards;
+}
+
+/* HEADING */
+
+h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.6rem;
+  margin-bottom: 18px;
+  color: #0b2a4a;
+  animation: slideDown 1s ease forwards;
+}
+
+/* TEXT */
+
+.message {
+  font-size: 1.15rem;
+  line-height: 1.7;
+  color: #244e78;
+  margin-bottom: 35px;
+}
+
+/* BUTTON */
+
+.btn {
+  display: inline-block;
+  padding: 14px 32px;
+  border-radius: 35px;
+
+  background: linear-gradient(135deg, #3b82f6, #2563eb);
+  color: #fff;
+  font-weight: 600;
+  text-decoration: none;
+
+  box-shadow: 0 10px 30px rgba(59, 130, 246, 0.4);
+  transition: all 0.3s ease;
+}
+
+.btn:hover {
+  transform: translateY(-3px) scale(1.05);
+  box-shadow: 0 15px 40px rgba(37, 99, 235, 0.5);
+}
+
+/* ANIMATIONS */
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: scale(0.95); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+@keyframes slideDown {
+  from { transform: translateY(-30px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+/* FLOATING HEARTS (BLUE & WHITE) */
+
+.heart {
+  position: fixed;
+  bottom: -10px;
+  font-size: 18px;
+  opacity: 0.7;
+  animation: floatUp 8s linear infinite;
+  pointer-events: none;
+}
+
+@keyframes floatUp {
+  0% {
+    transform: translateY(0) scale(1);
+    opacity: 0.8;
+  }
+  100% {
+    transform: translateY(-100vh) scale(1.4);
+    opacity: 0;
+  }
+}
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+body.gallery-page {
+  display: block;
+  align-items: unset;
+  justify-content: unset;
+  overflow-y: auto;
+}
+
+/* Make gallery container behave normally */
+body.gallery-page .container {
+  margin: 60px auto;
+}
+/* ===== GALLERY PAGE ===== */
+
+body.gallery-page {
+  background: linear-gradient(to bottom, #e6f2ff, #ffffff);
+  display: block;
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+/* Center container */
+.gallery-page .container {
+  max-width: 1100px;
+  margin: 60px auto;
+  text-align: center;
+}
+
+/* Heading */
+.gallery-page h1 {
+  color: #0d3b66;
+  margin-bottom: 40px;
+}
+
+/* GRID LAYOUT */
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+/* Images */
+.gallery img,
+.gallery video {
+  width: 100%;
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease;
+}
+
+/* Hover effect */
+.gallery img:hover,
+.gallery video:hover {
+  transform: scale(1.05);
+}
+
+/* Button */
+.btn {
+  display: inline-block;
+  margin-top: 40px;
+  padding: 12px 25px;
+  background-color: #0d3b66;
+  color: white;
+  text-decoration: none;
+  border-radius: 30px;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  background-color: #145da0;
+}
+/* ===== JOURNEY PAGE ===== */
+
+body.journey-page {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(to bottom right, #e6f2ff, #ffffff);
+  overflow-x: hidden;
+}
+
+.journey-page .container {
+  max-width: 800px;
+  margin: 80px auto;
+  text-align: center;
+}
+
+.journey-page h1 {
+  color: #0d3b66;
+  margin-bottom: 50px;
+}
+
+/* Timeline layout */
+.timeline {
+  position: relative;
+  padding-left: 20px;
+}
+
+/* Vertical line */
+.timeline::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  width: 3px;
+  height: 100%;
+  background: #0d3b66;
+  transform: translateX(-50%);
+}
+
+/* Timeline item */
+.timeline-item {
+  position: relative;
+  width: 50%;
+  padding: 20px 30px;
+  box-sizing: border-box;
+}
+
+/* Alternate left right */
+.timeline-item:nth-child(odd) {
+  left: 0;
+  text-align: right;
+}
+
+.timeline-item:nth-child(even) {
+  left: 50%;
+  text-align: left;
+}
+
+/* Card style */
+.timeline-item .content {
+  background: rgba(255, 255, 255, 0.9);
+  padding: 15px 20px;
+  border-radius: 15px;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+}
+
+.timeline-item .date {
+  font-weight: bold;
+  color: #0d3b66;
+  margin-bottom: 8px;
+}
+
+/* Heart animation */
+.heart {
+  position: fixed;
+  top: -10px;
+  animation: fall linear forwards;
+}
+
+@keyframes fall {
+  to {
+    transform: translateY(100vh);
+    opacity: 0;
+  }
+}
+/* ===== SCROLL FIX FOR JOURNEY PAGE ===== */
+
+body.journey-page {
+  min-height: 100vh;
+  overflow-y: auto;   /* ENABLE SCROLL */
+}
+
+/* Give spacing so scroll feels natural */
+.journey-page .container {
+  padding-bottom: 80px;
+}
+
+/* Timeline spacing */
+.timeline {
+  margin-bottom: 60px;
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+body.journey-page {
+  min-height: 100vh;
+  overflow-y: auto;
+  margin: 0;
+}

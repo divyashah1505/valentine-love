@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Our Journey 🤍</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="journey-page">
+
+  <div class="container">
+    <h1>Our Beautiful Journey 🤍</h1>
+
+    <!-- TIMELINE WRAPPER (IMPORTANT FOR SCROLL + DESIGN) -->
+    <div class="timeline">
+
+      <div class="timeline-item">
+        <div class="date">14 October 2024</div>
+        <div class="content">First time we talked on chat 🤍</div>
+      </div>
+
+      <div class="timeline-item">
+        <div class="date">22 October 2024</div>
+        <div class="content">9:50 PM – First call together 📞</div>
+      </div>
+
+      <div class="timeline-item">
+        <div class="date">30 November 2024</div>
+        <div class="content">10:25 – First time we met 💕</div>
+      </div>
+
+      <div class="timeline-item">
+        <div class="date">30 January 2025</div>
+        <div class="content">Borivali Station – First hug & first kiss 🤍</div>
+      </div>
+
+      <div class="timeline-item">
+        <div class="date">3 February 2025</div>
+        <div class="content">3 beautiful hours together… just us 💞</div>
+      </div>
+
+      <div class="timeline-item">
+        <div class="date">12 March 2025</div>
+        <div class="content">Radha Swami visit, flower, proposal 🌸💍</div>
+      </div>
+
+      <div class="timeline-item">
+        <div class="date">29 March 2025</div>
+        <div class="content">Tea Post date ☕💖</div>
+      </div>
+
+      <div class="timeline-item">
+        <div class="date">30 March 2025</div>
+        <div class="content">Our first magical L2L kiss 💋</div>
+      </div>
+
+      <div class="timeline-item">
+        <div class="date">Highest Call</div>
+        <div class="content">1hr 12min 56sec – And still not enough 🤍</div>
+      </div>
+
+      <div class="timeline-item">
+        <div class="date">Through Fights & Love</div>
+        <div class="content">
+          We argued, we cried, but we always sorted it out.
+          Because we choose each other every time 🤍
+        </div>
+      </div>
+
+    </div>
+
+    <a href="gallery.html" class="btn">See Our Photos 📸</a>
+  </div>
+
+  <!-- HEART ANIMATION SCRIPT MOVED TO BOTTOM (BEST PRACTICE) -->
+  <script>
+    function createHeart() {
+      const heart = document.createElement("div");
+      heart.classList.add("heart");
+      heart.innerHTML = "🤍";
+      heart.style.left = Math.random() * 100 + "vw";
+      heart.style.fontSize = Math.random() * 20 + 15 + "px";
+      heart.style.animationDuration = Math.random() * 3 + 5 + "s";
+      document.body.appendChild(heart);
+
+      setTimeout(() => {
+        heart.remove();
+      }, 8000);
+    }
+
+    setInterval(createHeart, 500);
+  </script>
+
+</body>
+</html>

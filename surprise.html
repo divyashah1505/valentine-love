@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Forever With You 🤍</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<script>
+function createHeart() {
+  const heart = document.createElement("div");
+  heart.classList.add("heart");
+  heart.innerHTML = "🤍";
+  heart.style.left = Math.random() * 100 + "vw";
+  heart.style.fontSize = Math.random() * 20 + 15 + "px";
+  heart.style.animationDuration = Math.random() * 3 + 5 + "s";
+  document.body.appendChild(heart);
+
+  setTimeout(() => {
+    heart.remove();
+  }, 8000);
+}
+
+setInterval(createHeart, 500);
+</script>
+
+
+<body>
+  <div class="container">
+
+    <h1>For You 🤍</h1>
+
+    <p class="message">
+      From our first chat…  
+      To our first call…  
+      To our first hug…  
+      To every kiss, every fight, every make-up…  
+
+      I don’t want perfect days.  
+      I just want days with you. 🤍
+    </p>
+
+    <h2>Will you always stay with me? 💍🤍</h2>
+
+  </div>
+</body>
+</html>

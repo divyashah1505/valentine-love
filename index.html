@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Jivya Special Moments 🤍</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+  <!-- Floating Hearts Script -->
+  <script>
+    function createHeart() {
+      const heart = document.createElement("div");
+      heart.classList.add("heart");
+      heart.innerHTML = "🤍";
+      heart.style.left = Math.random() * 100 + "vw";
+      heart.style.fontSize = Math.random() * 20 + 15 + "px";
+      heart.style.animationDuration = Math.random() * 3 + 5 + "s";
+      document.body.appendChild(heart);
+
+      setTimeout(() => {
+        heart.remove();
+      }, 8000);
+    }
+
+    setInterval(createHeart, 500);
+  </script>
+<body>
+
+  <div class="container">
+    <h1>Jivya Special Moments 🤍🦋🧿</h1>
+
+    <p class="message">
+      From our first chat…  
+      To our first call…  
+      To every hug, every kiss, every fight and every make-up…  
+      <br><br>
+      You are not just my love,  
+      You are my peace 🤍
+    </p>
+
+    <a href="moments.html" class="btn">See Our Journey 💌</a>
+  </div>
+
+
+
+
+</body>
+</html>
