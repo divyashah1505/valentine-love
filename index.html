@@ -3,46 +3,49 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Jivya Special Moments 🤍</title>
+  <title>Happy Birthday My Love 🎂 Jivya 🤍🦋🧿</title>
   <link rel="stylesheet" href="style.css" />
 </head>
-  <!-- Floating Hearts Script -->
-  <script>
-    function createHeart() {
-      const heart = document.createElement("div");
-      heart.classList.add("heart");
-      heart.innerHTML = "🤍";
-      heart.style.left = Math.random() * 100 + "vw";
-      heart.style.fontSize = Math.random() * 20 + 15 + "px";
-      heart.style.animationDuration = Math.random() * 3 + 5 + "s";
-      document.body.appendChild(heart);
-
-      setTimeout(() => {
-        heart.remove();
-      }, 8000);
-    }
-
-    setInterval(createHeart, 500);
-  </script>
 <body>
 
-  <div class="container">
-    <h1>Jivya Special Moments 🤍🦋🧿</h1>
+  <div class="main-wrapper">
+    <div class="container">
+      
+      <div class="special-badge">
+        ✨ Happy Birthday My Love! 🎂💖 ✨
+      </div>
 
-    <p class="message">
-      From our first chat…  
-      To our first call…  
-      To every hug, every kiss, every fight and every make-up…  
-      <br><br>
-      You are not just my love,  
-      You are my peace 🤍
-    </p>
+      <h1>Jivya Special Moments 🤍🦋🧿</h1>
+      <p class="subtitle">A little world built with love, just to celebrate YOU on your special day.</p>
 
-    <a href="moments.html" class="btn">See Our Journey 💌</a>
+      <div class="message">
+        From our very first chat…  
+        To our late night calls…  
+        To our first meet, our tight hugs, our sweetest kiss…  
+        And every fight and every make-up that only made us stronger.
+        <br><br>
+        You are not just my girlfriend,  
+        <span class="message-highlight">You are my peace, my heart & my forever 🤍</span>
+      </div>
+
+      <!-- Live Togetherness Counter -->
+      <div class="counter-section">
+        <div class="counter-title">⏳ Time Spent Falling In Love With You ⏳</div>
+        <div class="love-counter-grid" id="love-counter">
+          <!-- Populated dynamically by main.js -->
+        </div>
+      </div>
+
+      <!-- Action Buttons -->
+      <div class="btn-group">
+        <a href="surprise.html" class="btn btn-primary">🎂 Birthday Surprise For You 🎁</a>
+        <a href="moments.html" class="btn btn-secondary">📖 Relive Our Journey 💌</a>
+        <a href="gallery.html" class="btn btn-secondary">📸 Our Memories Wall ✨</a>
+      </div>
+
+    </div>
   </div>
 
-
-
-
+  <script src="main.js"></script>
 </body>
 </html>

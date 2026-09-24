@@ -3,45 +3,88 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Forever With You 🤍</title>
+  <title>A Birthday Surprise For You 🎂🤍 Jivya</title>
   <link rel="stylesheet" href="style.css" />
 </head>
-<script>
-function createHeart() {
-  const heart = document.createElement("div");
-  heart.classList.add("heart");
-  heart.innerHTML = "🤍";
-  heart.style.left = Math.random() * 100 + "vw";
-  heart.style.fontSize = Math.random() * 20 + 15 + "px";
-  heart.style.animationDuration = Math.random() * 3 + 5 + "s";
-  document.body.appendChild(heart);
-
-  setTimeout(() => {
-    heart.remove();
-  }, 8000);
-}
-
-setInterval(createHeart, 500);
-</script>
-
-
 <body>
-  <div class="container">
 
-    <h1>For You 🤍</h1>
+  <div class="main-wrapper">
+    <div class="container">
 
-    <p class="message">
-      From our first chat…  
-      To our first call…  
-      To our first hug…  
-      To every kiss, every fight, every make-up…  
+      <div class="special-badge">
+        🎂 Happy Birthday To My Favorite Human In The Universe 💖
+      </div>
 
-      I don’t want perfect days.  
-      I just want days with you. 🤍
-    </p>
+      <h1>Forever With You 🤍</h1>
+      <p class="subtitle">Because you deserve all the magic, laughter, and love the world has to offer.</p>
 
-    <h2>Will you always stay with me? 💍🤍</h2>
+      <!-- 1. Interactive Birthday Cake -->
+      <div class="cake-section" id="interactive-cake" title="Click or tap to make a wish and blow out the candle!">
+        <div class="cake">
+          <div class="candle">
+            <div class="flame"></div>
+          </div>
+          <div class="cake-tier-top">
+            <div class="cake-frosting"></div>
+          </div>
+          <div class="cake-tier-bottom">
+            <div class="cake-frosting"></div>
+          </div>
+        </div>
+        <div class="cake-instruction" id="cake-instruction">
+          🕯️ <em>Tap the cake to make a birthday wish and blow the candle! ✨</em>
+        </div>
+      </div>
 
+      <!-- 2. Interactive Love Letter -->
+      <div class="letter-section">
+        <div class="letter-envelope" id="letter-envelope" title="Tap to open your love letter">
+          <div class="envelope-header">
+            <span class="wax-seal">💌</span>
+            <span>A Secret Birthday Letter For You</span>
+            <span class="wax-seal">✨</span>
+          </div>
+          <p class="envelope-preview-text">Tap anywhere on this card to open and read 🤍</p>
+          
+          <div class="letter-body">
+            My Dearest Love,  
+            <br><br>
+            From our very first chat on 14th October, to our first phone call that lasted into the night…  
+            From our first hug at Borivali station where time completely stopped, to our sacred Radha Swami visit, our proposal, and our sweet Tea Post dates…  
+            <br><br>
+            Every single memory with you is my favourite place to be.  
+            You are the first person I want to talk to in the morning and the last voice I want to hear before sleeping.  
+            <br><br>
+            I don’t want a fairytale. I don't need perfect days.  
+            I just want ordinary, messy, beautiful, laughing days with YOU.  
+            <br><br>
+            Happy Birthday to the girl who stole my heart and made it her home. 🤍🦋🧿  
+            <br><br>
+            <em>Forever & always yours,</em><br>
+            <strong>Divya 🤍</strong>
+          </div>
+        </div>
+      </div>
+
+      <!-- 3. Proposal Section with Playful Dodging No Button -->
+      <div class="proposal-box" id="proposal-card">
+        <h2>Will you always stay with me? 💍🤍</h2>
+        <p style="color: #475569; font-size: 0.95rem;">Through every fight, every laugh, every tear, and every milestone.</p>
+        
+        <div class="proposal-actions" id="proposal-actions">
+          <button class="btn btn-primary" id="proposal-yes">YES! Always & Forever 🤍</button>
+          <button class="btn btn-secondary" id="proposal-no">No 🙈</button>
+        </div>
+      </div>
+
+      <div class="btn-group" style="margin-top: 35px;">
+        <a href="index.html" class="btn btn-secondary">🏠 Back to Home</a>
+        <a href="gallery.html" class="btn btn-secondary">📸 Revisit Our Memories</a>
+      </div>
+
+    </div>
   </div>
+
+  <script src="main.js"></script>
 </body>
 </html>
